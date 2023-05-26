@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Controles</title>
+</head>
+
+<body>
+    <button onclick="playPause()">Play/Pause</button>
+    <button onclick="reload()">Reload</button>
+    <button onclick="makeLarge()">Large</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    <video id="videoPlayer" width="500">
+        <source src="videos/video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <script> 
+        let video = document.getElementById("videoPlayer");
+        function playPause() { 
+            if (video.paused) 
+                video.play(); 
+            else 
+                video.pause(); 
+        }
+        function reload() { 
+           video.load(); 
+        }
+        function makeLarge() { 
+            video.width = 1000; 
+        }
+        function makeSmall() { 
+            video.width = 250; 
+        } 
+        function makeNormal() { 
+            video.width = 500; 
+        } 
+        </script>
+</body>
+
+</html>
